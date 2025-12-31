@@ -3,10 +3,10 @@ from Utils import Coord, main
 
 class MaxAreaCoordFinder:
 
-    @classmethod
-    def find_max_area(cls, input_list: list[list[int]]) -> int:
-        coords = cls._parse_coords(input_list)
-        return cls._get_max_area(coords)
+    @staticmethod
+    def run(input_list: list[list[int]]) -> int:
+        coords = MaxAreaCoordFinder._parse_coords(input_list)
+        return MaxAreaCoordFinder._get_max_area(coords)
 
     @staticmethod
     def _parse_coords(input_list: list[list[int]]) -> list[Coord]:

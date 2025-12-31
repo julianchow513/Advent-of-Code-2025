@@ -23,3 +23,17 @@ class MultiThreadSum:
         total += sum(f.result() for f in futures)
 
         return total
+
+
+class MultiThreadChunk:
+    def __init__(self, max_workers=os.cpu_count()) -> None:
+        self.max_workers = max_workers
+
+    def exec(
+        self,
+        function: Callable[..., Number],
+        iterable: Iterable[Any],
+        *args: Any,
+        **kwargs: Any
+    ):
+        pass
