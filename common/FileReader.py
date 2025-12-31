@@ -80,7 +80,7 @@ class TwoPartParser(ParserStrategy):
         return part1, part2
 
 
-class Cord3DParser(ParserStrategy):
+class CordParser(ParserStrategy):
 
     def _parse(self, file: TextIO) -> list[list[int]]:
         res = []
