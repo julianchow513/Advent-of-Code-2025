@@ -29,3 +29,13 @@ def timer(func: Callable[P, T]) -> Callable[P, T]:
         return result
 
     return wrapper
+
+
+@timer
+def main(parser, cls, test=True):
+    if test:
+        file_path = "./test_input.txt"
+    else:
+        file_path = "./input.txt"
+    input = parser().read_file(file_path)
+    print(cls.run(input))
