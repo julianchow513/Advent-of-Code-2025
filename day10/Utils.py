@@ -63,7 +63,7 @@ class Button:
 
 class CounterParser(ParserStrategy):
 
-    def _parse(self, file: TextIO):
+    def _parse(self, file: TextIO) -> list[tuple[list[list[int]], list[int]]]:
         problems = []
 
         for raw_line in file:
