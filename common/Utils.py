@@ -32,10 +32,14 @@ def timer(func: Callable[P, T]) -> Callable[P, T]:
 
 
 @timer
-def main(parser, cls, test=True):
+def main(parser, cls, test=True, custom_file_path: str = None):
     if test:
         file_path = "./test_input.txt"
     else:
         file_path = "./input.txt"
+
+    if custom_file_path is not None:
+        file_path = custom_file_path
+
     input = parser().read_file(file_path)
     print(cls.run(input))
